@@ -14,8 +14,13 @@
     "lint": "npx eslint . --ignore-path .gitignore --ext .js,.ts --fix",
     "format": "npx prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
+  "pre-commit": [
+    "lint",
+    "format"
+  ],
   "dependencies": {
     "express": "^4.18.2",
+    "pre-commit": "^1.2.2",
     "rimraff": "^0.0.1-security"
   },
   "devDependencies": {
